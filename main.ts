@@ -1,3 +1,7 @@
+// Tiny stack VM for make.fun's stack ISA (ISA.md v1): 32-bit wrapping ints,
+// 256-value data stack, 64-deep call stack, 256 words of memory, 10 traps.
+// One run answers every instance in MAKEFUN_INPUT_DIR, writing stdout.bin
+// and exit.txt per instance. Practice set: 1,000,000 (40/40).
 import{mkdirSync,readdirSync,readFileSync,writeFileSync}from'node:fs';
 import{join}from'node:path';
 const I=process.env.MAKEFUN_INPUT_DIR??'/input',O=process.env.MAKEFUN_OUTPUT_DIR??'/output';
